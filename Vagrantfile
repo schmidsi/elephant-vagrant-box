@@ -8,7 +8,7 @@ Vagrant::Config.run do |config|
   config.vm.forward_port 8000, 8000
   
   config.vm.network :hostonly, "10.80.80.80"
-  config.vm.share_folder("v-root", "/vagrant", "/Users/ssc/Sites", :nfs => true)
+  config.vm.share_folder("v-root", "/vagrant", ".", :nfs => true)
   
   config.ssh.forward_agent = true
   
