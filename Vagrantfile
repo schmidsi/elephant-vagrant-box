@@ -6,9 +6,10 @@ Vagrant::Config.run do |config|
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   config.vm.forward_port 8000, 8000
+  config.vm.forward_port 8080, 8080
   
   config.vm.network :hostonly, "10.80.80.80"
-  config.vm.share_folder("v-root", "/vagrant", "/Users/ssc/Sites", :nfs => true)
+  config.vm.share_folder("vagrant-root", "/vagrant", "~/Sites", :nfs => true)
   
   config.ssh.forward_agent = true
   
